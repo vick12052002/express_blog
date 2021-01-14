@@ -11,6 +11,7 @@ const userController = {
       },
       include: categoryModel
     }).then(posts => {
+      console.log(posts)
       res.render('index', {
         posts: posts
       })

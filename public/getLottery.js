@@ -1,17 +1,16 @@
-/* eslint-disable consistent-return */
 const lotteryBtn = document.querySelector('.lottery_btn');
 const loginArea = document.querySelector('.login_form');
 
-function loadLotteryInfo(data) {
-  const priceArea = document.querySelector('.price_area');
-  const template = `<div class="price_area">
-  <h2 class="price_title">${data.name}</h2>
-  <h3 class="price_description">${data.description}</h3>
-  <div class="d-flex justify-content-center " >
-  <img src="${data.img_url}" alt="${data.name}" class="rounded price_img" width="25%" ></div>
-  </div>`;
-  priceArea.outerHTML = template;
-}
+// function loadLotteryInfo(data) {
+//   const priceArea = document.querySelector('.price_area');
+//   const template = `<div class="price_area">
+//   <h2 class="price_title">${data.name}</h2>
+//   <h3 class="price_description">${data.description}</h3>
+//   <div class="d-flex justify-content-center " >
+//   <img src="${data.img_url}" alt="${data.name}" class="rounded price_img" width="25%" ></div>
+//   </div>`;
+//   priceArea.outerHTML = template;
+// }
 function getLottery(cb) {
   const requestUrl = 'http://lottery.alirong.tw/get-lottery';
   fetch(requestUrl, {
