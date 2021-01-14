@@ -1,0 +1,24 @@
+<%- include('template/header'); %>
+<main>
+  <h2 class="category_title">文章分類</h2>
+  <div>
+    <ul class="type_list">
+      <% types.forEach(type => { %>
+      <li class="type_item">
+        <h2 class="type_title"><%= type.type %></h2>
+        <%- include('template/category_list', { posts:type.Posts});%>
+      </li>
+      <% })%>
+    </ul>
+  </div>
+</main>
+<%- include('template/footer')%>
+<script>
+  document.querySelector('.type_list').addEventListener('click', (e) => {
+    const element = e.target.closest('.type_item');
+    console.log(element.childNodes)
+    if (element.childNodes[3]) {
+      element.childNodes[3].classList.toggle('hidden')
+    }
+  })
+</script>

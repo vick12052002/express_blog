@@ -1,0 +1,25 @@
+
+          <div class="cards_area_header">
+            <h3 class="card_title"><a href="/page/<%= post.id%>"></a>
+              <%= post.title %></h3>
+            <div class=" card-info">
+              <span class="icon_time"><img src="../public/img/watch-later.png" alt="" srcset=""></span>
+              <span class="post_time">
+                <%=  post.updatedAt %>
+              </span>
+              <span class="icon_type"><img src="../public/img/folder.png" alt="" srcset=""></span>
+              <span class="post_type">
+                <div class="icon_folder"></div>
+                <%= post.Category.type %>
+              </span>
+              <% if(username){ %>
+              <div class="list_btn_group">
+                <span class="edit_btn list_btn"><a href="/system/update-post/<%= post.id %>">編輯</a></span>
+                <span class="delete_btn list_btn"><a href="/system/delete-post/<%= post.id %>">刪除</a></span>
+              </div>
+                <% } %>
+            </div>
+          </div>
+          <div class="card_content">
+            <%- post.content %>
+          </div>

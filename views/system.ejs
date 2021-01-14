@@ -1,0 +1,32 @@
+<%- include('template/header') %>
+<main>
+  <div class="banner">
+    <div class="banner_img"></div>
+    <div class="blog_info">
+      <h2 class="blog_title">鹹酥雞聯盟-後台</h2>
+      <p class="blog_welcome">台灣美食應有盡有，凡舉「大腸包小腸、肉圓、豬血糕」等等，說到宵夜的選項更是不勝枚舉，而「 鹹酥雞 」則是大人小孩都喜愛的台灣美食，這個部落格是記錄全台各地的鹹酥雞</p>
+    </div>
+  </div>
+  <div class="post_list_area">
+    <h2 class="warming"><%= errorMessage || infoMessage %><h2>
+    <ul class="post_list">
+      <% posts.forEach(post => {
+        %>
+        <li class="post_item">
+          <h3 class="post_title"><%= post.title %> 
+          </h3>
+          <div class="post_info">
+            <span class="post_time"><%= post.updatedAt %>
+              </span>
+            <div class="list_btn_group">
+              <span class="edit_btn list_btn"><a href="/system/update-post/<%= post.id %>">編輯</a></span>
+              <span class="delete_btn list_btn"><a href="/system/delete-post/<%= post.id %>">刪除</a></span>
+            </div>
+          </div>
+        <% }) %>
+        </li>
+    </ul>
+  </div>
+</main>
+
+<%-include('template/footer')%>

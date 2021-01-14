@@ -1,0 +1,30 @@
+<%- include('template/header') %>
+<main>
+  <div class="system_area ">
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">獎項名稱</th>
+          <th scope="col">獎品敘述</th>
+          <th scope="col">縮圖網址</th>
+          <th scope="col">權重 weight</th>
+          <th scope="col">儲存</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <form action="/system/add" method="POST">
+            <td><input class="form-control" type="text" name="name" placeholder="請輸入獎項名稱"></td>
+            <td><input class="form-control" type="text" name="description" placeholder="請輸入敘述"></td>
+            <td><input class="form-control" type="text" name="img" placeholder="請輸入縮圖網址"></td>
+            <td><input class="form-control" type="text" name="weight" placeholder="請輸入權重"></td>
+            <td><input class="form-control" type="submit" value="新增"> </td>
+          </form>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  </body>
+  <script src="/public/getLottery.js"></script>
+</main>
+<%-include('template/footer')%>

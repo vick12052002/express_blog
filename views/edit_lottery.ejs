@@ -1,0 +1,39 @@
+<%- include('template/header') %>
+
+<main>
+  <div class="system_area ">
+    <table class="table">
+      <thead class="thead-light">
+        <tr>
+          <th scope="col">id</th>
+          <th scope="col">獎項名稱</th>
+          <th scope="col">獎品敘述</th>
+          <th scope="col">縮圖網址</th>
+          <th scope="col">權重</th>
+          <th scope="col">動作</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% if(prices){
+          prices.forEach(price => { %>
+        <tr>
+          <form action="/system/update/<%= price.id%>" method="POST">
+            <th scope="row"><%= price.id %></th>
+            <td><input class="form-control" type="text" name="name" value="<%= price.name %>"></td>
+            <td><input class="form-control" type="text" name="description" value="<%= price.description %>"></td>
+            <td><input class="form-control" type="text" name="img" value="<%= price.img_url %>"></td>
+            <td><input class="form-control" type="text" name="weight" value="<%= price.weight %>"></td>
+            <td class="d-flex">
+              <a class="btn btn-outline-danger delete_btn" href="/system/delete/<%= price.id %>">刪除</a>
+              <button type="submit" class="btn btn-outline-dark update_btn">儲存</button>
+            </td>
+          </form>
+        </tr>
+        <% })} %>
+      </tbody>
+    </table>
+  </div>
+  </body>
+  <script src="/public/getLottery.js"></script>
+</main>
+<%-include('template/footer')%>

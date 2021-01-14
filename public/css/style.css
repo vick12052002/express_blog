@@ -1,0 +1,611 @@
+* {
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+header {
+  height: 80px;
+  box-shadow: 2px 1px 2px #cccccc;
+}
+
+.header_area {
+  margin: 0 auto;
+  max-width: 1280px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.home a {
+  text-decoration: none;
+  color: #489af2;
+  font-size: 28px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.home a span {
+  color: #111;
+}
+
+.header_left {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.navbar {
+  min-width: 300px;
+  display: flex;
+  justify-content: space-around;
+  height: 100%;
+  align-items: center;
+}
+
+.navbar li {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: ease-in 0.3 all;
+}
+
+.navbar li a {
+  text-decoration: none;
+  vertical-align: middle;
+  align-items: center;
+  text-align: center;
+  color: #111;
+}
+
+.navbar li:hover {
+  border-bottom: #448899 3px solid;
+  box-sizing: content-box;
+  position: relative;
+}
+
+.navbar li:hover a {
+  position: relative;
+  top: 1px;
+  font-size: 16px;
+}
+
+.header_right {
+  display: flex;
+  justify-content: space-between;
+  max-width: 200px;
+  align-items: center;
+  min-height: 40px;
+}
+
+.btn {
+  width: 100px;
+  padding: 0 10px;
+  height: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn a {
+  text-decoration: none;
+  color: coral;
+  font-weight: bold;
+  cursor: pointer;
+  transition: ease-in-out all 0.4s;
+  line-height: 3em;
+  border-radius: 15px;
+  width: 100px;
+}
+
+.btn:hover a {
+  background-color: coral;
+  /* width: 100%; */
+  height: 100%;
+  color: white;
+  font-weight: normal
+}
+
+.banner {
+  margin: 0 auto;
+  text-align: center;
+  max-width: 1280px;
+  position: relative;
+  vertical-align: middle;
+  max-height: 40%;
+}
+
+.banner_img {
+  background-image: url(https://chevigal.com/wp-content/uploads/20181107220737_70.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: .2;
+  height: 40%;
+}
+
+.blog_info {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  z-index: 1;
+  max-width: 720px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.blog_title {
+  font-size: 22px;
+  padding-bottom: 20px;
+}
+
+main {
+  /* background-color: #eee; */
+  min-height: calc(100vh - 80px - 36px);
+  margin: 0 auto;
+  position: relative;
+}
+
+.blog_welcome {
+  line-height: 1.5em;
+}
+
+footer {
+  background-color: #323232;
+  text-align: center;
+  color: white;
+  padding: 10px 0;
+}
+
+.form_title {
+  font-size: 26px;
+  padding: 20px 0;
+  font-weight: bold;
+}
+
+.login_form {
+  border: 2px solid #489af2;
+  margin: 60px auto;
+  max-width: 350px;
+  height: auto;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.form_area {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 50px;
+  justify-content: left;
+}
+
+.form_input {
+  margin: 15px 0 0 0;
+  font-size: 18px;
+  text-align: start;
+}
+
+.form_input input[type="text"], .form_input input[type="password"] {
+  border-radius: 5px;
+  font-size: 18px;
+  margin: 10px 0 10px 0;
+  width: 100%;
+}
+
+.submit_btn {
+  margin: 15px auto;
+  border: #489af2;
+  background-color: #489af2;
+  display: block;
+  width: 100%;
+  height: 30px;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 18px;
+  box-shadow: #056edd 2px 2px 1px;
+}
+
+.warming {
+  color: #f70303ee;
+  /* padding-top: 10px; */
+  font-size: 22px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+
+.about_me-area {
+  margin: 60px auto 0px;
+  max-width: 720px;
+  max-height: 60%;
+  text-align: center;
+  box-shadow: #999999 1px 2px 4px;
+  border-radius: 5px;
+  padding: 30px 20px;
+  background-color: #eee;
+}
+
+.about_me-title {
+  font-size: 26px;
+  margin-bottom: 20px;
+}
+
+.about_me-desc {
+  font-size: 22px;
+  line-height: 2em;
+}
+
+.post_list_area {
+  margin: 0 auto;
+  max-width: 1280px;
+  padding: 30px 40px;
+  max-height: 60%;
+  transform: translateY(-20%);
+}
+
+.post_list {
+  border: #aaa 1px solid;
+  box-shadow: #999999 2px 2px 2px;
+  padding: 0 70px;
+  height: 50%;
+  overflow: scroll;
+  background-color: #fff;
+}
+
+.post_item {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid #056edd;
+  align-items: center;
+  transition: ease-in 0.3s all;
+  flex-wrap: wrap;
+  padding: 30px 0;
+}
+.post_item>a{
+  display: inline-block;
+  padding: 30px 0;
+  text-decoration: none; 
+  color: #111;
+}
+
+.post_title {
+  padding-left: 20px;
+  line-height: 2em;
+}
+.list_item_title{
+  width: 75%;
+} 
+.list_item_title>a{
+  color: #111;
+  text-decoration: none;
+  padding: 30px 0;
+  display: inline-block;
+  width: 100%;
+}
+.list_area .post_area .post_item{
+  padding: unset;
+}
+.post_item:hover {
+  cursor: pointer;
+  background-color: rgb(185, 208, 241);
+  filter: drop-shadow(2px 1px 3px black);
+}
+
+.post_item:hover .list_btn {
+  background-color: #056edd;
+}
+
+.list_btn:hover {
+  transform: scale(1.2);
+}
+
+.post_item:hover .list_btn a {
+  color: white;
+}
+
+.post_item:last-child {
+  border: none;
+}
+
+.post_info {
+  display: flex;
+  vertical-align: middle;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 220px;
+}
+
+.edit_btn {
+  margin: 0 10px;
+}
+
+.list_btn {
+  border: 1px solid #056edd;
+  padding: 5px 10px;
+  display: inline-block;
+}
+
+.list_btn a {
+  text-decoration: none;
+  color: #777777;
+}
+
+.post_form_area {
+  max-width: 1000px;
+  margin: 20px auto;
+  border: 1px solid #ccc;
+  padding: 20px 35px;
+  position: relative;
+  top: 10px
+}
+
+.post_form input[type="text"] {
+  border-radius: 0;
+  border: 1px solid #111;
+  padding: 5px;
+}
+
+.form_input select {
+  width: 100%;
+  padding: 5px 0;
+  font-size: 18px;
+}
+
+.form_input select option {
+  position: relative;
+  right: 4px;
+}
+
+.default_option {
+  color: #ccc;
+}
+
+.form_input textarea {
+  font-size: 18px;
+}
+
+.input_error {
+  display: none;
+}
+
+.card_content {
+  overflow: hidden;
+  line-height: 2em;
+  text-overflow: ellipsis;
+  max-height: 140px;
+  min-height: 60px;
+
+}
+.post_area{
+  margin: 0 auto;
+  max-width: 1000px;
+  padding: 30px 40px;
+  border: 1px solid #e3edf7;
+  transform: translateY(-2%);
+  background-color: #fff;
+  box-shadow: 1px 1px 3px #a2a2a2;
+}
+.post_card{
+  display: flex;
+  flex-direction: column;
+  padding: 30px 10px;
+  border: 2px solid #66a6eb;
+  align-items: flex-start;
+  transition: ease-in 0.2s all;
+  margin-bottom: 20px;
+  height: 50%;
+  flex-wrap:nowrap;
+  justify-content: flex-start;
+}
+.post_card:last-child{
+  border: 2px solid #66a6eb;
+
+}
+.cards_area_header{
+  margin-bottom: 20px;
+  width: 100%;
+}
+.card-info{
+  height: 40px;
+  background-color: #ccc;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #777777;
+  flex-flow: wrap;
+}
+.card_title{
+  font-size: 18px;
+  margin-bottom: 18px;
+  font-weight: bold;
+  line-height: 1.5em;
+}
+.post_card:hover  .list_btn{
+  color: #fff;
+  background-color: #056edd;
+
+}
+.list_btn:hover {
+  transform: scale(1.2);
+}
+
+.post_card:hover .list_btn a {
+  color: white;
+}
+.more_btn{
+  padding-top: 10px;
+  margin-top: 10px;
+}
+.icon_time img,.icon_type img {
+  width: auto;
+  height: 45%;
+  margin: 0 5px 0 15px;
+}
+.page_card .card_content{
+  overflow: unset;
+  height: 100%;
+}
+.page_area .page_card{
+  height: 100%;
+  overflow: scroll;
+}
+
+.type_list{
+  max-width: 720px;
+  margin: 20px auto;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding:10px 20px;
+}
+.type_item{
+  /* margin-left: 30px; */
+  border-bottom: 1px solid; 
+}
+.type_item:hover{
+  cursor: pointer;
+  background-color: wheat;
+}
+
+.type_item:hover .type_title{
+  text-shadow: #ccc 2px 2px 1px;
+  transform: translateX(10px);
+}
+
+.type_item:last-child{
+  border: unset;
+}
+.type_item ul .post_item:hover{
+  background-color: rgb(247, 232, 204);
+}
+
+.hidden{
+  display: none;
+}
+.type_title{
+  font-size: 18px;
+  padding: 20px 10px;
+  font-weight: bold;
+}
+.category_title{
+  font-size: 24px;
+  margin: 20px auto;
+  text-align: center;
+  font-weight: bold;
+}
+.posts_list>li{
+  padding: 0;
+}
+.posts_list li>a{
+  width: 100%;
+  display: inline-block;
+  height: 100%;
+  padding: 20px 0;
+  text-decoration: none;
+  color: #111;
+}
+@media (max-width: 767px) {
+  .header_area {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+  .header_left {
+    margin: 0 auto;
+  }
+  .btn_group {
+    border: 1px solid #999999;
+    box-shadow: 1px 2px 1px #aaa;
+  }
+  .header_right {
+    z-index: 3;
+    background-color: white;
+    /* flex-wrap: wrap; */
+  }
+  .banner{
+    min-height: 50%;
+    max-height: 70%;
+  }
+  .banner_img {
+    height: 100%;
+  }
+  .blog_info {
+    right: 0;
+    transform: translate(0, -50%);
+    padding: 10px 20px;
+  }
+  .about_me-area {
+    margin: 30px auto 10px;
+    height: 50%;
+    transform: translateY(-40%);
+  }
+  .post_item {
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: start;
+    align-items: flex-start;
+  }
+  .post_title {
+    padding: 0;
+  }
+  .post_info {
+    flex-wrap: wrap;
+    justify-content: start;
+    align-items: center;
+  }
+  .list_btn_group {
+    vertical-align: middle;
+    max-height:50% ;
+    max-height:20% ;
+
+  }
+  .card-info {
+    height: 50px;
+  }
+  .post_card {
+    height: auto;
+  }
+  .card_content{
+    max-height: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header_left {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: baseline;
+    padding-top: 15px;
+  }
+  header {
+    /* height:b auto; */
+    box-shadow: none;
+  }
+  .navbar {
+    width: 100vw;
+    height: 70%;
+    box-shadow: 2px 1px 2px #cccccc;
+  }
+  .header_right {
+    position: relative;
+    top: 12px;
+  }
+  .navbar li:hover a {
+    position: relative;
+    top: 2px;
+  }
+
+  .btn_group {
+    border: 1px solid #999999;
+    box-shadow: 1px 2px 1px #aaa;
+  }
+  .btn_group .list_btn{
+    min-width: 30px;
+    height: auto;
+  }
+
+}
