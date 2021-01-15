@@ -20,7 +20,7 @@ app.use(flash());
 
 app.use(
   session({
-    secret: 'keyboard cat',
+    secret: Process.env.BLOG,
     resave: false,
     saveUninitialized: true,
   })
@@ -73,11 +73,6 @@ app.post('/system/update-post/:id', postController.handleUpdatePost);
 app.get('/system/add-category', postController.addCategory);
 app.post('/system/add-category', postController.handleAddCategory, redirectBack);
 
-app.get('/lottery', lotteryController.lottery); //參加抽獎頁面
-app.get('/get-lottery', lotteryController.getLottery); //顯示中獎頁面
-
-app.get('/system/update-lottery', lotteryController.editLottery);
-app.get('/system/add-lottery', lotteryController.addLottery);
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);

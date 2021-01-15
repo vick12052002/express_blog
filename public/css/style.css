@@ -105,7 +105,6 @@ header {
 
 .btn:hover a {
   background-color: coral;
-  /* width: 100%; */
   height: 100%;
   color: white;
   font-weight: normal
@@ -146,7 +145,6 @@ header {
 }
 
 main {
-  /* background-color: #eee; */
   min-height: calc(100vh - 80px - 36px);
   margin: 0 auto;
   position: relative;
@@ -214,7 +212,6 @@ footer {
 
 .warming {
   color: #f70303ee;
-  /* padding-top: 10px; */
   font-size: 22px;
   margin: 0 auto;
   margin-bottom: 10px;
@@ -509,6 +506,124 @@ footer {
   text-decoration: none;
   color: #111;
 }
+
+.wrapper_bg {
+  margin: 0 auto;
+  max-width: 100vw;
+  height: 767px;
+  background: url(https://i.imgur.com/9EKxhR5.jpg) center no-repeat;
+}
+
+.wrapper h1 {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 60px;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+  z-index: 2;
+  transform: translate(-50%, -50%);
+}
+
+main {
+  margin: 0 auto;
+  /* padding-top: 84px; */
+}
+
+.section {
+  padding-top: 150px;
+  text-align: center;
+}
+
+.lottery_area {
+  background-color: #fff;
+  border-radius: 16px;
+  margin: 0 auto;
+  width: 500px;
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: 10%;
+}
+
+.lottery_area h2 {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  color: #5ec1b6;
+  padding: 20px;
+  line-height: 1.5em;
+}
+
+.event_block {
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px dotted #cdcdcd;
+  padding: 20px 0;
+  align-items: baseline;
+}
+
+.event_title {
+  color: #322929;
+  font-size: 18px;
+  font-weight: bold;
+  position: relative;
+  min-width: 72px;
+  text-align: justify;
+  text-align-last: justify;
+}
+
+.event_title::after {
+  content: ':';
+  position: absolute;
+  top: 0;
+  right: -12px;
+}
+
+.event_desc {
+  padding-left: 22px;
+  font-size: 16px;
+  color: #322929;
+  line-height: 2em;
+  text-align: justify;
+}
+
+.event_btn {
+  margin: 20px auto;
+  margin-bottom: 20px;
+}
+.lottery_btn{
+    margin-top:20px;
+    width: 400px;
+    font-size: 20px;
+    color: #fff;
+    border-radius: 8px;
+    border: none;
+    background-color: #e62a45;
+    cursor: pointer;
+    line-height: 3em;
+}
+
+.prize_page {
+  margin: 0 auto;
+  padding-top:100px ;
+  height: 100%;
+  justify-content: flex-end;
+  align-items: center;
+  display: flex;
+  flex-direction: column-reverse;
+  background-color:rgba(254, 254, 254, 0.4);
+}
+
+.prize_page > h1 {
+  color: #fff;
+  font-size: 36px;
+  margin-bottom: 55px;
+  text-shadow:2px 2px rgba(80, 80, 80, 1) ; 
+}
 @media (max-width: 767px) {
   .header_area {
     flex-wrap: wrap;
@@ -582,7 +697,6 @@ footer {
     padding-top: 15px;
   }
   header {
-    /* height:b auto; */
     box-shadow: none;
   }
   .navbar {
