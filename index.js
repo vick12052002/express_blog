@@ -20,7 +20,7 @@ app.use(flash());
 
 app.use(
   session({
-    secret: 'keyboard cat',
+    secret: Process.env.BLOG,
     resave: false,
     saveUninitialized: true,
   })
