@@ -6,7 +6,6 @@ const path = require('path');
 
 const postController = require('./controllers/post');
 const userController = require('./controllers/user');
-const lotteryController = require('./controllers/lottery');
 
 const app = express();
 const port = process.env.PORT || 5001;
@@ -20,7 +19,7 @@ app.use(flash());
 
 app.use(
   session({
-    secret: Process.env.BLOG,
+    secret: process.env.BLOG,
     resave: false,
     saveUninitialized: true,
   })
