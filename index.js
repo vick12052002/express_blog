@@ -20,7 +20,7 @@ app.use(flash());
 
 app.use(
   session({
-    secret: Process.env.BLOG,
+    secret: process.env.BLOG,
     resave: false,
     saveUninitialized: true,
   })
